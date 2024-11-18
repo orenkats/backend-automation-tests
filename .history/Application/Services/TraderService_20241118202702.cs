@@ -29,8 +29,8 @@ public class TraderService
         // Create and place the stock order
         trader.PlaceOrder(stockSymbol, quantity, price, orderType);
 
-        
         // Update the database
+       
         await _dbContext.SaveChangesAsync();
 
         // Publish the order to RabbitMQ
